@@ -6,6 +6,7 @@ import yogaWasmModule from '@cf-wasm/satori/yoga.wasm?module';
 import { initSatori, initYoga } from '@cf-wasm/satori/others';
 import { initResvg } from '@cf-wasm/resvg/legacy/others';
 import resvgWasmModule from '@cf-wasm/resvg/legacy/resvg.wasm?module';
+import { defaultFont } from '@cf-wasm/og/others';
 
 if (!initSatori.initialized) {
   initSatori(initYoga(yogaWasmModule));
@@ -14,8 +15,6 @@ if (!initSatori.initialized) {
 if (!initResvg.initialized) {
   initResvg(resvgWasmModule);
 }
-
-import { defaultFont } from '@cf-wasm/og/others';
 
 defaultFont.set(notoSansFontBuffer);
 
