@@ -1,5 +1,5 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import { ImageResponse } from "@cf-wasm/og/workerd";
+import { ImageResponse } from "@cf-wasm/og/others";
 import { t } from "@cf-wasm/og/html-to-react";
 
 export const GET: RequestHandler = async () => {
