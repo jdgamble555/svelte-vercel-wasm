@@ -7,9 +7,9 @@ import { initSatori, initYoga } from '@cf-wasm/satori/others';
 import { initResvg } from '@cf-wasm/resvg/legacy/others';
 import resvgWasmModule from '@cf-wasm/resvg/legacy/resvg.wasm?module';
 
-if (!initSatori.initialized) {
+//if (!initSatori.initialized) {
   initSatori(initYoga(yogaWasmModule));
-}
+
 
 if (!initResvg.initialized) {
   initResvg(resvgWasmModule);
