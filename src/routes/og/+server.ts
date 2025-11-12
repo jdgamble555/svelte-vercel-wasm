@@ -1,12 +1,12 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import { ImageResponse } from "@cf-wasm/og/others";
 import { t } from "@cf-wasm/og/html-to-react";
-import notoSansFontBuffer from '@cf-wasm/og/noto-sans-v27-latin-regular.ttf.bin';
-import yogaWasmModule from '@cf-wasm/satori/yoga.wasm?module';
+import { ImageResponse } from '@cf-wasm/og/others';
 import { initSatori, initYoga } from '@cf-wasm/satori/others';
-import { initResvg } from '@cf-wasm/resvg/others';
-import resvgWasmModule from '@cf-wasm/resvg/resvg.wasm?module';
+import { initResvg } from '@cf-wasm/resvg/legacy/others';
 import { defaultFont } from '@cf-wasm/og/others';
+import resvgWasmModule from '@cf-wasm/resvg/legacy/resvg.wasm?module';
+import yogaWasmModule from '@cf-wasm/satori/yoga.wasm?module';
+import notoSansFontBuffer from '@cf-wasm/og/noto-sans-v27-latin-regular.ttf.bin';
 
 if (!initSatori.initialized) {
   initSatori(initYoga(yogaWasmModule));
