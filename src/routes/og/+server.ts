@@ -1,7 +1,7 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import { ImageResponse } from "@cf-wasm/og/others";
 import { t } from "@cf-wasm/og/html-to-react";
-import notoSansFontBuffer from '@cf-wasm/og/others/noto-sans-v27-latin-regular.ttf.bin';
+import notoSansFontBuffer from '@cf-wasm/og/noto-sans-v27-latin-regular.ttf.bin';
 import yogaWasmModule from '@cf-wasm/satori/others/yoga.wasm?module';
 import { initSatori, initYoga } from '@cf-wasm/satori/others';
 import { initResvg } from '@cf-wasm/resvg/others';
