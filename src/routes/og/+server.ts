@@ -1,28 +1,21 @@
-import type { RequestHandler } from '@sveltejs/kit';
-import { t } from "@cf-wasm/og/html-to-react";
-import { ImageResponse } from '@cf-wasm/og/others';
-import { initSatori, initYoga } from '@cf-wasm/satori/others';
-import { initResvg } from '@cf-wasm/resvg/legacy/others';
-import { defaultFont } from '@cf-wasm/og/others';
-import resvgWasmModule from '@cf-wasm/resvg/legacy/resvg.wasm?module';
-import yogaWasmModule from '@cf-wasm/satori/yoga.wasm?module';
-import notoSansFontBuffer from '@cf-wasm/og/noto-sans-v27-latin-regular.ttf.bin';
+import { type RequestHandler } from "@sveltejs/kit";
+import { ImageResponse } from "$lib/image-response";
+import ImageCard from "$lib/image-card.svelte";
 
-if (!initSatori.initialized) {
-  initSatori(initYoga(yogaWasmModule));
-}
 
-if (!initResvg.initialized) {
-  initResvg(resvgWasmModule);
-}
+export const prerender = false;
 
-defaultFont.set(notoSansFontBuffer);
 
-export const GET: RequestHandler = async () => {
-    const html = `<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%;">
-        <p>Renders HTML</p>
-        <p>Hello World!</p>
-      </div>`;
+export const GET = (async ({ url }) => {
 
-    return new ImageResponse(t(html));
-};
+  const { width, height } = Object.fromEntries(url.searchParams);
+
+  return await ImageResponse(
+    ImageCard,
+    {
+      width: Number(width) || 1600,
+      height: Number(height) || 900
+    }
+  );
+
+}) satisfies RequestHandler;
