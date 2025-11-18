@@ -7,6 +7,8 @@ export default defineConfig({
 	plugins: [
 		tailwindcss(),
 		sveltekit(),
-		cloudflareModules(),
+		cloudflareModules({
+			target: 'edge-light'
+		}),
 	]
 });
