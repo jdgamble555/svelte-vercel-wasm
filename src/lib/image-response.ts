@@ -1,3 +1,4 @@
+/*
 import type { Component } from 'svelte';
 import { render } from 'svelte/server';
 import { defaultFont, ImageResponse as OGImageResponse } from '@cf-wasm/og/others';
@@ -28,3 +29,4 @@ export const ImageResponse = async <T extends Record<string, unknown>>(
     const result = render(component as Component);
     return await OGImageResponse.async(html(result.body), options);
 };
+*/
