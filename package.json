@@ -12,10 +12,10 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
 	},
 	"devDependencies": {
-		"@cf-wasm/og": "^0.2.3",
+		"@cf-wasm/og": "^0.3.1",
 		"@cf-wasm/plugins": "^0.1.7",
-		"@cf-wasm/resvg": "^0.2.2",
-		"@cf-wasm/satori": "^0.2.2",
+		"@cf-wasm/resvg": "^0.3.1",
+		"@cf-wasm/satori": "^0.3.1",
 		"@ethercorps/sveltekit-og": "^4.1.0",
 		"@sveltejs/adapter-vercel": "^6.1.2",
 		"@sveltejs/kit": "^2.49.0",
