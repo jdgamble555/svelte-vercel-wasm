@@ -1,7 +1,7 @@
 
 import type { Component } from 'svelte';
 import { render } from 'svelte/server';
-import { ImageResponse as OGImageResponse } from '@cf-wasm/og/others';
+import { ImageResponse as OGImageResponse } from '@cf-wasm/og';
 import { html } from 'satori-html';
 
 export const prerender = false;
