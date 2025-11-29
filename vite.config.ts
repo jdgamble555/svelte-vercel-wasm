@@ -7,8 +7,5 @@ export default defineConfig({
 	plugins: [
 		tailwindcss(),
 		sveltekit()
-	],
-	ssr: {
-		external: ["@cf-wasm/og"]
-	}
+	]
 });
