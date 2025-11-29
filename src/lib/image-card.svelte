@@ -1,11 +1,5 @@
 <script lang="ts">
-  type Props = {
-
-      title?: string;
-      website?: string;
-  };
-
-  const { title, website }: Props = $props();
+  const { title, website }: { title?: string; website?: string } = $props();
 </script>
 
 <div
@@ -14,10 +8,10 @@
   <div
     class="m-1.5 p-6 w-full h-full rounded-3xl text-[72px] flex flex-col border-2 border-slate-700 text-slate-700"
   >
-    {title?.slice(0, 80)}
+    {title?.slice(0, 80) || "Default Title"}
     <hr class="border border-slate-700 w-full" />
     <p class="text-[52px] font-bold flex justify-center text-slate-700">
-      {website}
+      {website || "Default Website"}
     </p>
   </div>
 </div>

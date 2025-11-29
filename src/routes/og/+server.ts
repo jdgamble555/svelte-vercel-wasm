@@ -18,7 +18,7 @@ export const GET = (async ({ url }) => {
     },
     {
       title: 'Custom OG Image',
-      website: 'Generated with Svelte, Vercel, and Cloudflare WASM!'
+      website: 'Generated with SvelteKit and deployed to Vercel Edge!'
     }
   );
 
