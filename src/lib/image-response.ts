@@ -12,7 +12,6 @@ export const ImageResponse = async <T extends Record<string, unknown>>(
     options?: ConstructorParameters<typeof OGImageResponse>['1'],
     props?: T
 ) => {
-    console.log(props);
     const result = render(component as Component, { props });
     return await OGImageResponse.async(html(result.body), options);
 };
