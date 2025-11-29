@@ -9,11 +9,6 @@ export default defineConfig({
 		sveltekit()
 	],
 	ssr: {
-		external: [
-			"@cf-wasm/og",
-			"@cf-wasm/resvg",
-			"@cf-wasm/satori",
-			"@cf-wasm/photon",
-		]
+		external: ["@cf-wasm/og"]
 	}
 });

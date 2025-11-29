@@ -3,7 +3,6 @@ import { ImageResponse } from "$lib/image-response";
 import ImageCard from "$lib/image-card.svelte";
 
 
-
 export const prerender = false;
 
 
@@ -16,6 +15,10 @@ export const GET = (async ({ url }) => {
     {
       width: Number(width) || 1600,
       height: Number(height) || 900
+    },
+    {
+      title: 'Custom OG Image',
+      website: 'Generated with Svelte, Vercel, and Cloudflare WASM!'
     }
   );
 

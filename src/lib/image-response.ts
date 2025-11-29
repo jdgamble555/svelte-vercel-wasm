@@ -9,8 +9,10 @@ export const prerender = false;
 
 export const ImageResponse = async <T extends Record<string, unknown>>(
     component: Component<T>,
-    options?: ConstructorParameters<typeof OGImageResponse>['1']
+    options?: ConstructorParameters<typeof OGImageResponse>['1'],
+    props?: T
 ) => {
-    const result = render(component as Component);
+    console.log(props);
+    const result = render(component as Component, { props });
     return await OGImageResponse.async(html(result.body), options);
 };
